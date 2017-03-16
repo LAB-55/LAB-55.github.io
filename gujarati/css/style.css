@@ -1,0 +1,16 @@
+span img.img-responsive, .img-span img.img-responsive{
+   width: 550px;
+   box-shadow: 2px 0px 10px #CCC;
+   margin:4%;
+}
+img.img-responsive:hover{
+   cursor: zoom-in;
+}
+.dark-title{
+   font-weight: 700;
+   font-size: 150%;
+}
+p{
+   margin-left: 2%;
+   padding-left: 2%;
+}
