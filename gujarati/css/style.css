@@ -1,5 +1,7 @@
+
 span img.img-responsive, .img-span img.img-responsive{
-   width: 550px;
+   /*max-width: 550px;*/
+   width: 80%;
    box-shadow: 2px 0px 10px #CCC;
    margin:4%;
 }
@@ -9,8 +11,21 @@ img.img-responsive:hover{
 .dark-title{
    font-weight: 700;
    font-size: 150%;
+   margin-bottom: 0px;
 }
 p{
    margin-left: 2%;
    padding-left: 2%;
+   text-align: justify;
+}
+.pad-tab{
+	padding-top: 10px;
+	/*margin-top:px;*/
+}
+.pad-tab  p {
+	margin-left: 0%;
+   padding-left: 0%;
+}
+.margin-tab{
+	margin-left: 5%;
 }
