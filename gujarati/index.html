@@ -32,8 +32,8 @@
                <h1>Boards Installation</h1>
                <hr>
                   <div class="list-group">
-                     <a class="list-group-item" href="./intel-edison/">Intel&reg; Edison Setup <span class="time-in-days" data-time="1489498200"></span></a>
-                     <a class="list-group-item" href="./intel-galileo/">Intel&reg; Galileo Setup<span class="time-in-days" data-time="1489700100"></span></a>
+                     <a class="list-group-item" href="./intel-edison/">Intel&reg; Edison Setup <span class="time-in-days" data-time="1489700100"></span></a>
+                     <a class="list-group-item" href="./intel-galileo/">Intel&reg; Galileo Setup<span class="time-in-days" data-time="1489498200"></span></a>
                   </div>
             </div>
          </div>
@@ -45,7 +45,7 @@
          });
          $(document).ready(function(){
             $(".time-in-days").each(function(){
-            var t = parseInt( (Math.floor(Date.now() / 1000) - $(this).data('time')) /86400);
+            var t = parseInt( (Math.floor(Date.now() / 1000) + 19800 - $(this).data('time')) /86400);
             var s = "<small> ("+ (t > 0 ? t == 1 ? "Yesterday": t+" days ago" : "Today")+")</small>";
                $(this).append( s ); 
             })
