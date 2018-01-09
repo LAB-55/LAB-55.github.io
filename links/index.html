@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+	<title>ATL Cart</title>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        ATL CART
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+	
+<table  id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead>	
+		<tr>
+<td>Tech - Category</td>
+<td>Website</td>
+<td>Google search</td>
+<td>Website Link</td>
+</tr>
+
+
+	</thead>
+<tbody>
+<tr>
+<td>Arduino</td>
+<td>Arduino Official website</td>
+<td>#</td>
+<td>#</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('tr').each(function(){
+    	$(this).find('td').each(function(){
+	    	var  t = $(this).text().replace(/\s+|\t/g,"")
+			if( t.includes('http://amzn.to/')){
+		    	$(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Purchase Now</a>")
+	    	}else if(t.includes('http://www.arcobotics.com/') ){
+	    		$(this).html("<a href='"+t+"' class='btn btn-success' target='_blank'>Learn More</a>")
+	    	}
+    	})
+    })
+    $('#example').DataTable();
+});
+</script>
+</body>
+</html>
+
